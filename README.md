@@ -1,15 +1,17 @@
-# librenms-nagios-cli
+# open-dns-resolver-check
 
-To install dependencies:
+## Quickstart
 
-```bash
-bun install
+Pull the repository and build the docker image
+
+```
+git clone https://github.com/jackhenry/open-dns-resolver-check.git
+cd open-dns-resolver-check
+docker build -t open-dns-resolver-check .
 ```
 
-To run:
+Run the check by providing a list of subnets as arguments
 
-```bash
-bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.1.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+docker run -it --rm open-dns-resolver-check 8.8.8.0/24
+```
